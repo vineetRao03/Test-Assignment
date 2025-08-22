@@ -1,4 +1,4 @@
-# SDET Practice Projects  
+# Automation Practice Projects  
 
 This repository contains demo automation scripts built with **Java + Selenium + TestNG**.  
 These exercises simulate real-world QA scenarios to strengthen core SDET skills.  
