@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech with Jatin </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+
+        .animated-bg {
+            background: linear-gradient(-45deg, #1E40AF, #3B82F6, #60A5FA, #93C5FD);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="animated-bg p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 id="site-title" class="text-white text-2xl font-bold flex items-center">
+                 Tech with Jatin
+            </h1>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-white hover:text-blue-200 transition-colors">🏠 Home</a>
+                <a href="#" class="text-white hover:text-blue-200 transition-colors">📚 Tutorials</a>
+                <a href="#" class="text-white hover:text-blue-200 transition-colors">🛠️ Tools</a>
+                <a href="#" class="text-white hover:text-blue-200 transition-colors">📞 Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-2">
+            <a href="#" class="block text-white py-2 px-4 hover:bg-blue-700">🏠 Home</a>
+            <a href="#" class="block text-white py-2 px-4 hover:bg-blue-700">📚 Tutorials</a>
+            <a href="#" class="block text-white py-2 px-4 hover:bg-blue-700">🛠️ Tools</a>
+            <a href="#" class="block text-white py-2 px-4 hover:bg-blue-700">📞 Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section id="hero" class="text-center mb-16">
+            <h2 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">SDET Mastery Course</h2>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">Master the Art of Test Automation 🚀</p>
+            <button class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-transform">
+                Start Learning 📚
+            </button>
+        </section>
+
+        <!-- Featured Content -->
+        <section id="features" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Selenium Card -->
+            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                <div class="text-4xl mb-4">🌐</div>
+                <h3 class="text-2xl font-bold mb-4 text-blue-600">Selenium WebDriver</h3>
+                <p class="text-gray-600">Master web automation with Java, Python, and C#. Learn advanced locator strategies and framework design.</p>
+            </div>
+            <!-- API Testing Card -->
+            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                <div class="text-4xl mb-4">🔄</div>
+                <h3 class="text-2xl font-bold mb-4 text-blue-600">API Automation</h3>
+                <p class="text-gray-600">RestAssured, Postman automation, and comprehensive API testing strategies.</p>
+            </div>
+            <!-- CI/CD Card -->
+            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                <div class="text-4xl mb-4">⚡</div>
+                <h3 class="text-2xl font-bold mb-4 text-blue-600">CI/CD Integration</h3>
+                <p class="text-gray-600">Jenkins pipelines, GitHub Actions, and continuous testing implementation.</p>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="mb-16">
+            <h3 class="text-3xl font-bold mb-8 text-center">Popular Tools & Frameworks 🛠️</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-xl transition-shadow">
+                    <span class="text-2xl">🌟</span>
+                    <p class="font-semibold">Selenium</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-xl transition-shadow">
+                    <span class="text-2xl">🔷</span>
+                    <p class="font-semibold">TestNG</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-xl transition-shadow">
+                    <span class="text-2xl">🟦</span>
+                    <p class="font-semibold">Cucumber</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-xl transition-shadow">
+                    <span class="text-2xl">🔷</span>
+                    <p class="font-semibold">Appium</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="glass-effect p-12 rounded-2xl text-center">
+            <h3 class="text-3xl font-bold mb-4">Join Our Testing Community 👥</h3>
+            <p class="text-gray-600 mb-8">Get weekly automation tips, frameworks, and best practices!</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
+                <input type="email" placeholder="Enter your email" 
+                    class="flex-1 px-6 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-transform">
+                    Subscribe 📧
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">Made with 💙 by Jatin</p>
+            <p>&copy; 2024 Tech with Jatin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
